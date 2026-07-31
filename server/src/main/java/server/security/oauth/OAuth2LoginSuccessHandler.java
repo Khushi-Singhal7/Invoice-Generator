@@ -4,6 +4,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
@@ -25,6 +26,9 @@ public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
     private final JwtUtil jwtUtil;
     private final UserRepository userRepository;
     private final OAuth2AuthorizedClientService authorizedClientService;
+
+    @Value("${frontend.url}")
+    private String frontendUrl;
 
     @Override
     public void onAuthenticationSuccess(
@@ -72,7 +76,8 @@ public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
         String jwt = jwtUtil.generateToken(email);
 
         response.sendRedirect(
-                "http://localhost:5173/oauth-success?token=" + jwt
+                frontendUrl + "/oauth-success?token=" + jwt
+        
         );
     }
 }
