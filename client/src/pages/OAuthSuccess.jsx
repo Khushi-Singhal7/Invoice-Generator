@@ -1,35 +1,51 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { getProfile } from "../../services/authService";
 
 function OAuthSuccess() {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
+  useEffect(() => {
 
-        const params = new URLSearchParams(window.location.search);
+    const loginSuccess = async () => {
 
-        const token = params.get("token");
+      const params = new URLSearchParams(window.location.search);
 
-        if (token) {
+      const token = params.get("token");
 
-            localStorage.setItem("token", token);
+      if (!token) {
+        navigate("/login");
+        return;
+      }
 
-            navigate("/dashboard");
+      localStorage.setItem("token", token);
 
-        } else {
+      try {
 
-            navigate("/login");
+        const response = await getProfile();
 
-        }
+        localStorage.setItem(
+          "user",
+          JSON.stringify(response.data)
+        );
 
-    }, [navigate]);
+      } catch (error) {
+        console.error(error);
+      }
 
-    return (
-        <div className="d-flex justify-content-center align-items-center vh-100">
-            <h3>Logging you in...</h3>
-        </div>
-    );
+      navigate("/dashboard");
+    };
+
+    loginSuccess();
+
+  }, [navigate]);
+
+  return (
+    <div className="d-flex justify-content-center align-items-center vh-100">
+      <h3>Logging you in...</h3>
+    </div>
+  );
 }
 
 export default OAuthSuccess;
