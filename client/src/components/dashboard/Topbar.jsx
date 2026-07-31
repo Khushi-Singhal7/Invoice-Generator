@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./Topbar.css";
 import {
   FaUserCircle,
@@ -11,6 +12,16 @@ function Topbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const { darkMode, setDarkMode } = useTheme();
+
+  const [userName, setUserName] = useState("User");
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (user && user.name) {
+      setUserName(user.name);
+    }
+  }, []);
 
   const pageConfig = {
     "/dashboard": {
@@ -45,6 +56,7 @@ function Topbar() {
       </div>
 
       <div className="topbar-right">
+
         <button
           type="button"
           className="theme-btn"
@@ -56,7 +68,7 @@ function Topbar() {
 
         <div className="profile">
           <FaUserCircle size={34} />
-          <span>Khushi</span>
+          <span>{userName}</span>
         </div>
 
         <button
@@ -66,6 +78,7 @@ function Topbar() {
         >
           + Create Invoice
         </button>
+
       </div>
     </div>
   );
