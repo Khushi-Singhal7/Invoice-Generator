@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { getProfile } from "../../services/authService";
+import { getProfile } from "../services/authService";
 
 function OAuthSuccess() {
 
