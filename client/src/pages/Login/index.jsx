@@ -50,16 +50,15 @@ function Login() {
     } catch (error) {
       toast.error(
         error.response?.data?.message ||
-          "Invalid email or password!"
+        "Invalid email or password!"
       );
     } finally {
       setLoading(false);
     }
   };
-
   const handleGoogleLogin = () => {
     window.location.href =
-      "http://localhost:8080/oauth2/authorization/google";
+      "https://invoice-generator-backend-lmxm.onrender.com/oauth2/authorization/google";
   };
 
   return (
