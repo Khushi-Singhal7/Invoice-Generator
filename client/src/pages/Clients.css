@@ -1,0 +1,249 @@
+/* ========================= */
+/* Clients Page */
+/* ========================= */
+
+.clients-page{
+    padding:30px;
+}
+
+.clients-card{
+    background:var(--card);
+    color:var(--text);
+    border:1px solid var(--border);
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.clients-card:hover{
+    transform:translateY(-3px);
+}
+
+.clients-card-body{
+    padding:30px;
+}
+
+.clients-card h2{
+    margin-bottom:25px;
+    font-size:30px;
+    font-weight:700;
+    color:var(--text);
+}
+
+/* ========================= */
+/* Form */
+/* ========================= */
+
+.form-control,
+.form-select,
+textarea{
+    background:var(--card) !important;
+    color:var(--text) !important;
+    border:1px solid var(--border) !important;
+    border-radius:12px;
+    padding:12px 15px;
+    transition:.3s;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus{
+    background:var(--card) !important;
+    color:var(--text) !important;
+    border-color:#6366f1 !important;
+    box-shadow:0 0 0 .2rem rgba(99,102,241,.15);
+}
+
+.form-control::placeholder{
+    color:var(--muted);
+}
+
+textarea{
+    resize:none;
+}
+
+/* ========================= */
+/* Buttons */
+/* ========================= */
+
+.btn-primary{
+    background:linear-gradient(135deg,#6366f1,#8b5cf6)!important;
+    border:none!important;
+    border-radius:12px;
+    padding:12px 22px;
+    font-weight:600;
+}
+
+.btn-warning{
+    background:linear-gradient(135deg,#f59e0b,#f97316)!important;
+    border:none!important;
+    color:#fff!important;
+}
+
+.btn-danger{
+    background:linear-gradient(135deg,#ef4444,#dc2626)!important;
+    border:none!important;
+}
+
+.btn{
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* Search */
+/* ========================= */
+
+.client-search{
+    max-width:350px;
+    border-radius:30px !important;
+}
+
+/* ========================= */
+/* Table */
+/* ========================= */
+
+.table-responsive{
+    border-radius:16px;
+}
+
+.table{
+    margin:0;
+    color:var(--text);
+    min-width:850px;
+}
+
+.table thead th{
+    background:#6366f1 !important;
+    color:#fff !important;
+    border:none;
+    padding:16px;
+    white-space:nowrap;
+}
+
+.table tbody td{
+    background:var(--card) !important;
+    color:var(--text) !important;
+    border-color:var(--border) !important;
+    vertical-align:middle;
+    padding:15px;
+    white-space:nowrap;
+}
+
+.table tbody tr{
+    transition:.3s;
+}
+
+.table tbody tr:hover{
+    background:rgba(99,102,241,.05);
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media(max-width:992px){
+
+    .clients-page{
+        padding:20px;
+    }
+
+    .clients-card-body{
+        padding:22px;
+    }
+
+    .clients-card h2{
+        font-size:26px;
+    }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .clients-page{
+        padding:15px;
+    }
+
+    .clients-card-body{
+        padding:18px;
+    }
+
+    .clients-card h2{
+        font-size:24px;
+    }
+
+    .client-search{
+        max-width:100%;
+    }
+
+    .table{
+        min-width:800px;
+    }
+
+    .btn-primary{
+        width:100%;
+    }
+
+    .btn-sm{
+        margin-bottom:6px;
+    }
+
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media(max-width:480px){
+
+    .clients-page{
+        padding:10px;
+    }
+
+    .clients-card-body{
+        padding:15px;
+    }
+
+    .clients-card h2{
+        font-size:22px;
+    }
+
+    .table th,
+    .table td{
+        font-size:13px;
+        padding:12px;
+    }
+
+    .btn{
+        font-size:14px;
+    }
+
+}
+.client-form input,
+.client-form textarea,
+.client-form select{
+    background:#1e293b;
+    color:#f8fafc;
+    border:1px solid #334155;
+}
+
+.client-form input::placeholder,
+.client-form textarea::placeholder{
+    color:#94a3b8;
+}
+
+.client-form input:focus,
+.client-form textarea:focus,
+.client-form select:focus{
+    background:#1e293b;
+    color:#fff;
+    border-color:#6366f1;
+    box-shadow:0 0 0 .2rem rgba(99,102,241,.25);
+}

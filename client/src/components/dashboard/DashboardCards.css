@@ -1,0 +1,167 @@
+.dashboard-card {
+    background: var(--card);
+    border-radius: 22px;
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 145px;
+
+    height: 100%;
+
+    transition: 0.35s;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(99, 102, 241, 0.18);
+}
+
+.dashboard-icon {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 30px;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.dashboard-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard-content h6 {
+    color: #94a3b8;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.dashboard-content h2 {
+    color: var(--text);
+
+    font-size: clamp(22px, 2vw, 30px);
+
+    font-weight: 800;
+
+    margin-bottom: 5px;
+
+    line-height: 1.2;
+
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.dashboard-content p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Large Tablet */
+@media (max-width: 992px) {
+
+    .dashboard-card {
+        padding: 18px;
+        gap: 18px;
+    }
+
+    .dashboard-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 26px;
+    }
+
+    .dashboard-content h2 {
+        font-size: 26px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    .dashboard-card {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .dashboard-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+    }
+
+    .dashboard-content h2 {
+        font-size: 22px;
+    }
+
+    .dashboard-content h6 {
+        font-size: 14px;
+    }
+
+    .dashboard-content p {
+        font-size: 13px;
+    }
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .dashboard-card{
+        padding:16px;
+        gap:14px;
+        border-radius:18px;
+    }
+
+    .dashboard-icon{
+        width:48px;
+        height:48px;
+        font-size:18px;
+        border-radius:14px;
+    }
+
+    .dashboard-content h2{
+        font-size:20px;
+    }
+
+    .dashboard-content h6{
+        font-size:13px;
+    }
+
+    .dashboard-content p{
+        font-size:12px;
+    }
+
+}
+@media (max-width:400px){
+
+    .dashboard-card{
+        padding:14px;
+        gap:12px;
+    }
+
+    .dashboard-icon{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+
+    .dashboard-content h2{
+        font-size:18px;
+    }
+
+}

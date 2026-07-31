@@ -1,0 +1,159 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background .35s ease, color .35s ease;
+}
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --sidebar:#ffffff;
+  --text:#1f2937;
+  --muted:#94a3b8;
+  --primary:#6366f1;
+  --border:#e5e7eb;
+  --shadow:0 15px 40px rgba(0,0,0,.08);
+}
+/* ========================= */
+/* Light Theme */
+/* ========================= */
+
+.light-theme{
+
+  --bg:#f4f7fb;
+
+  --card:#ffffff;
+
+  --sidebar:#ffffff;
+
+  --text:#1f2937;
+
+  --muted:#94a3b8;
+
+  --primary:#6366f1;
+
+  --border:#e5e7eb;
+
+  --shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/* ========================= */
+/* Dark Theme */
+/* ========================= */
+
+.dark-theme{
+
+  --bg:#0f172a;
+
+  --card:#1e293b;
+
+  --sidebar:#111827;
+
+  --text:#f8fafc;
+
+  --muted:#94a3b8;
+
+  --primary:#6366f1;
+
+  --border:#334155;
+
+  --shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* ========================= */
+/* Global Elements */
+/* ========================= */
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
+
+input,
+select,
+textarea{
+  font-family:inherit;
+  background:var(--card);
+  color:var(--text);
+  border:1px solid var(--border);
+  outline:none;
+  transition:.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(99,102,241,.15);
+}
+
+::placeholder{
+  color:var(--muted);
+}
+
+/* ========================= */
+/* Scrollbar */
+/* ========================= */
+
+::-webkit-scrollbar{
+  width:8px;
+  height:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:var(--bg);
+}
+
+::-webkit-scrollbar-thumb{
+  background:var(--primary);
+  border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  opacity:.8;
+}
+
+/* ========================= */
+/* Text Selection */
+/* ========================= */
+
+::selection{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* ========================= */
+/* Utility */
+/* ========================= */
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+table{
+  border-collapse:collapse;
+}
+
+body,
+#root{
+  min-height:100vh;
+}
+

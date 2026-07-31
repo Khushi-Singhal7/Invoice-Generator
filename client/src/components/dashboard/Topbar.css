@@ -1,0 +1,191 @@
+/* ========================= */
+/* TOPBAR */
+/* ========================= */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+
+    padding:20px 28px;
+    border-radius:22px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    margin-bottom:30px;
+
+    transition:all .3s ease;
+}
+
+.topbar-left h2{
+    margin:0;
+    font-size:38px;
+    font-weight:800;
+}
+
+.topbar-left p{
+    margin-top:6px;
+    font-size:15px;
+}
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+/* ========================= */
+/* Icons */
+/* ========================= */
+
+.theme-btn,
+.notification-btn{
+    width:46px;
+    height:46px;
+
+    border:none;
+    border-radius:50%;
+
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.theme-btn:hover,
+.notification-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* Profile */
+/* ========================= */
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-weight:600;
+}
+
+/* ========================= */
+/* Button */
+/* ========================= */
+
+.topbar .btn-primary{
+    height:46px;
+    padding:0 22px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+    font-weight:600;
+}
+
+/* ========================= */
+/* LIGHT THEME */
+/* ========================= */
+
+body.light-theme .topbar{
+    background:#ffffff;
+}
+
+body.light-theme .topbar-left h2{
+    color:#1f2937;
+}
+
+body.light-theme .topbar-left p{
+    color:#64748b;
+}
+
+body.light-theme .theme-btn,
+body.light-theme .notification-btn{
+    background:#ffffff;
+    color:#374151;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+body.light-theme .profile{
+    color:#374151;
+}
+
+/* ========================= */
+/* DARK THEME */
+/* ========================= */
+
+body.dark-theme .topbar{
+    background:#1f2937;
+}
+
+body.dark-theme .topbar-left h2{
+    color:#ffffff;
+}
+
+body.dark-theme .topbar-left p{
+    color:#cbd5e1;
+}
+
+body.dark-theme .theme-btn,
+body.dark-theme .notification-btn{
+    background:#111827;
+    color:#ffffff;
+    box-shadow:none;
+}
+
+body.dark-theme .profile{
+    color:#ffffff;
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media(max-width:992px){
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:20px;
+    }
+
+    .topbar-right{
+        width:100%;
+        flex-wrap:wrap;
+    }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media(max-width:576px){
+
+    .topbar{
+        padding:18px;
+    }
+
+    .topbar-left h2{
+        font-size:28px;
+    }
+
+    .profile span{
+        display:none;
+    }
+
+    .theme-btn,
+    .notification-btn{
+        width:42px;
+        height:42px;
+    }
+
+    .topbar .btn-primary{
+        width:100%;
+    }
+
+}

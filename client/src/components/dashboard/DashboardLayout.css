@@ -1,0 +1,167 @@
+.dashboard{
+    display:flex;
+    min-height:100vh;
+    background:var(--bg);
+}
+
+.dashboard-content{
+    flex:1;
+    padding:30px;
+    background:var(--bg);
+    color:var(--text);
+    transition:background .3s,color .3s;
+}
+
+/* Hamburger Button */
+
+.menu-toggle{
+    display:none;
+    position:fixed;
+    top:18px;
+    left:18px;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+    border-radius:12px;
+
+    background:var(--primary);
+    color:#fff;
+
+    cursor:pointer;
+    z-index:1001;
+
+    font-size:20px;
+
+    box-shadow:var(--shadow);
+}
+
+/* Theme Button */
+
+.theme-toggle{
+    position:fixed;
+    top:18px;
+    right:18px;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--card);
+    color:var(--text);
+
+    box-shadow:var(--shadow);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    z-index:1001;
+
+    transition:all .3s ease;
+}
+
+.theme-toggle:hover{
+    transform:rotate(20deg) scale(1.08);
+    background:var(--primary);
+    color:#fff;
+}
+
+/* Overlay */
+
+.sidebar-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:998;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+    .dashboard-content{
+        padding:20px;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .dashboard-content{
+        padding:80px 15px 20px;
+    }
+
+    .theme-toggle{
+        top:18px;
+        right:18px;
+    }
+
+}
+/* ========================= */
+/* Dashboard Theme */
+/* ========================= */
+
+.dashboard-content .card{
+    background: var(--card) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--shadow);
+}
+
+.dashboard-content .form-control,
+.dashboard-content .form-select,
+.dashboard-content textarea{
+    background: var(--card) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.dashboard-content .form-control:focus,
+.dashboard-content .form-select:focus,
+.dashboard-content textarea:focus{
+    background: var(--card) !important;
+    color: var(--text) !important;
+    border-color: var(--primary) !important;
+}
+
+.dashboard-content .table{
+    color: var(--text) !important;
+}
+
+.dashboard-content .table th,
+.dashboard-content .table td{
+    background: var(--card) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+}
+
+.dashboard-content .table-light th,
+.dashboard-content .table-light td{
+    background: var(--card) !important;
+    color: var(--text) !important;
+}
+
+.dashboard-content .form-label,
+.dashboard-content label{
+    color: var(--text) !important;
+}
+
+.dashboard-content hr{
+    border-color: var(--border) !important;
+}

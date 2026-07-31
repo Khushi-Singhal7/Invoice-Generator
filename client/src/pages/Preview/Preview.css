@@ -1,0 +1,210 @@
+/* ========================= */
+/* Preview Page */
+/* ========================= */
+
+.preview-page{
+    padding:30px;
+}
+
+/* ========================= */
+/* Toolbar */
+/* ========================= */
+
+.preview-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+
+    background:var(--card);
+    color:var(--text);
+
+    border:1px solid var(--border);
+    border-radius:18px;
+
+    padding:20px 24px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:25px;
+}
+
+.invoice-status{
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:700;
+    font-size:15px;
+    white-space:nowrap;
+}
+
+.invoice-status.paid{
+    background:#22c55e;
+    color:#fff;
+}
+
+.invoice-status.pending{
+    background:#f59e0b;
+    color:#fff;
+}
+
+.invoice-status.overdue{
+    background:#ef4444;
+    color:#fff;
+}
+
+.preview-toolbar button{
+    min-width:170px;
+    height:46px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.preview-toolbar button:hover{
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* Invoice Card */
+/* ========================= */
+
+.preview-card{
+    background:var(--card);
+    color:var(--text);
+
+    border:1px solid var(--border);
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+}
+
+.invoice-preview-wrapper{
+    overflow-x:auto;
+}
+
+/* ========================= */
+/* Invoice Template */
+/* ========================= */
+
+.invoice-preview{
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.invoice-preview table{
+    width:100%;
+}
+
+.invoice-preview table th{
+    background:#f8f9fa;
+}
+
+.invoice-preview h2{
+    font-weight:700;
+    color:var(--text);
+}
+
+.invoice-preview h5{
+    font-weight:600;
+    color:var(--text);
+}
+
+.invoice-preview p{
+    margin-bottom:6px;
+    color:var(--text);
+}
+
+.table-primary{
+    font-size:18px;
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media(max-width:992px){
+
+    .preview-page{
+        padding:20px;
+    }
+
+    .preview-toolbar{
+        justify-content:center;
+    }
+
+    .preview-card{
+        padding:22px;
+    }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .preview-page{
+        padding:15px;
+    }
+
+    .responsive-toolbar{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .invoice-status{
+        width:100%;
+        text-align:center;
+    }
+
+    .preview-toolbar button{
+        width:100%;
+        min-width:100%;
+    }
+
+    .preview-card{
+        padding:18px;
+    }
+
+    .invoice-preview table{
+        min-width:700px;
+    }
+
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media(max-width:480px){
+
+    .preview-page{
+        padding:10px;
+    }
+
+    .preview-toolbar{
+        padding:15px;
+    }
+
+    .preview-card{
+        padding:15px;
+        border-radius:16px;
+    }
+
+    .invoice-preview h2{
+        font-size:24px;
+    }
+
+    .invoice-preview h5{
+        font-size:18px;
+    }
+
+    .table-primary{
+        font-size:16px;
+    }
+
+}
