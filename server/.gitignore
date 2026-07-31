@@ -40,8 +40,6 @@ build/
 .env
 .env.*
 
-# Local application properties
-src/main/resources/application.properties
 
 # Logs
 *.log
